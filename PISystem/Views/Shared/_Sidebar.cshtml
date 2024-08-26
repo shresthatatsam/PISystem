@@ -27,7 +27,7 @@
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
                 <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">PIS</span>
+                <span class="brand-text font-weight-light">PI SYSTEM</span>
             </a>
 
             <!-- Sidebar -->
@@ -38,14 +38,14 @@
                         <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                       @*  @{
+                         @{
                             var username = Context.Session.GetString("UserName");
                             if (!string.IsNullOrEmpty(username))
                             {
                                 <span class="d-block" style="color:white">Welcome, @username |  <a class="nav-link" href="/UserInformation/Index">Logout</a></span>
                             }
 
-                        } *@
+                        } 
                     </div>
                 </div>
 
@@ -64,131 +64,56 @@
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+
+
+                    <li class="nav-item">
+                        
+                            @Html.ActionLink("DashBoard", "Index", "Dashboard", null, new { @class = "nav-link" })
+                          
+                    </li>
+
+
+
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-chart-pie"></i>
+                            <p>
+                                Karmachari Bibharan
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          
+                            <li class="nav-item">
+                                @Html.ActionLink("karmachari Bibaran one", "Index", "KarmachariBibaran", null, new { @class = "nav-link" })
+                            </li>
+                          
+                        </ul>
                       
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    Group
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    @Html.ActionLink("GroupName", "Index", "GroupName", null, new { @class = "nav-link" })
-                                </li>
-                                
-                            </ul>
-                        </li>
+                    </li>
 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-chart-pie"></i>
+                            <p>
+                                Pratibedan
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                           
+                            <li class="nav-item">
+                                @Html.ActionLink("Pratibedan 1", "Index", "Pratibedan", null, new { @class = "nav-link" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("karmachari Bibaran one", "Index", "KarmachariBibaran", null, new { @class = "nav-link" })
+                            </li>
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    UserGroup
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    @Html.ActionLink("UserGroup", "Index", "UserGroup", null, new { @class = "nav-link" })
-                                </li>
+                        </ul>
 
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    Message
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    @Html.ActionLink("MessageInfo", "Index", "MessageInfo", null, new { @class = "nav-link" })
-
-                                </li>
-
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    Party
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    @Html.ActionLink("Party", "Index", "Party", null, new { @class = "nav-link" })
-
-                                </li>
-
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    Dealer
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    @Html.ActionLink("Dealer", "Index", "Dealer", null, new { @class = "nav-link" })
-
-                                </li>
-
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    Currency
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    @Html.ActionLink("Currency", "Index", "Currency", null, new { @class = "nav-link" })
-
-                                </li>
-
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    Forex Buy Sell
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    @Html.ActionLink("Create", "CreateIndex", "ForexBuySellDeals", null, new { @class = "dropdown-item" })
-                                                   
-                                </li>
-
-                            </ul>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    @Html.ActionLink("View", "Index", "ForexBuySellDeals", null, new { @class = "dropdown-item" })
-                                </li>
-
-                            </ul>
-                        </li>
-
+                    </li>
 
 
                     </ul>
